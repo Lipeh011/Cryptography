@@ -14,7 +14,7 @@ Este é um projeto de decodificador de texto usando JavaScript. Ele usa um formu
 <br>
 <h1> Como acessar o projeto ❓</h1>
 <br>
-<h2> - Baixe os arquivos do projeto pelo github ou clique aqui para testar !</h2>
+<h2> - Baixe os arquivos do projeto pelo github ou <a href="https://lipeh011.github.io/Jogo-Acertar-Alvo/" target="_blank"> clique aqui </a> para testar !</h2>
 <br>
 <h1> 🚀 Tecnologias Utilizadas:</h1>
 <br>
