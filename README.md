@@ -1,6 +1,6 @@
 <img src="https://timr.com.br/wp-content/uploads/2021/06/30.06.21-FOTO-ARTIGO-para-SITE_1-redimensionada.png"  img/>
 <br>
-<h1> Projeto Decodificador</h1>
+<h1> Projeto Encriptador<h1>
 <h3>🟢 Objetivo de desenvolver um decodificador de texto.</h3>
 <br> 
 <h1> Descrição </h1>
