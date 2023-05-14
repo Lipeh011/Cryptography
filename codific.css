@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+body {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow-y: hidden;
+  background: url("imgs/background.png") no-repeat center center fixed;
+  background-size: cover;
+
+}
+
+header img  {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  
+}
+
+textarea {
+
+  border-radius: 3%;
+  position: absolute;
+  width: 47%;
+  height: 60%;
+  left: 15.5%;
+  top: 11%;
+
+  border: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  background: transparent;
+
+  line-height: 150%;
+  color: #ffffff;
+  background-color: #020702;
+  resize: none;
+}
+textarea::placeholder{
+  color: rgba(0, 211, 141, 0.466);
+
+}
+
+.botoes{
+  position: absolute;
+  width:  60%;
+  height: 22%;
+  left: 8%;
+  top: 86%; 
+  
+}
+
+.criptografar {
+  bottom:190%;
+  right: 6%;
+  top: 20%;
+  left: 16%;
+  position: relative;
+  flex-direction: row;
+  
+  align-items: flex-start;
+  padding: 3%;
+  gap: 8px;
+  width: 34%;
+  height: 4%;
+  cursor: pointer;
+
+  background-color: #008f47f5;
+  border-radius: 2em;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 0px;
+  text-align: center;
+  color: #000000;
+
+}
+
+.criptografar:hover{
+  transform:scale(1.02);
+}
+
+
+.descriptografar {
+  bottom: 190%;
+  right: 6%;
+  top: 20%;
+  left: 16%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: #00ff73 0 1px 8px;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 3%;
+  gap: 8px;
+  width: 34%;
+
+  height: 67px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 2em;
+
+  height: 19px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 0px;
+  text-align: center;
+
+  color: #81ffba;
+  margin-left: 20px;
+
+}
+.descriptografar:hover{
+  transform:scale(1.02);
+}
+
+
+.aviso {
+  position: absolute;
+  left: 15.7%;
+  top: 80%;
+  color: #c7ffdd;
+  font-family: 'Inter';
+  font-style: normal;
+  width: 30%;
+  text-align: center;
+}
+.aviso span {
+  margin-left: 1%;
+
+}
+
+.container {
+  left: 68%;
+  top: 4%;
+  position: absolute;
+  width: 30%;
+  height: 93%;
+
+  background-color: rgb(0, 36, 24);
+  border-radius: 20px;
+  overflow: auto;
+
+}
+.container::-webkit-scrollbar { /* Oculta a scrollbar do container */
+  display: none;
+}
+
+.imagem-em-cima {
+  position: absolute;
+  top: 17%;
+  left: 18%;
+  width: 60%;
+  height: 45%;
+  background-color: transparent;
+}
+
+.user-msg {
+  position: absolute;
+  top: 60%;
+  font-size: 1.5em;
+  left: 19%;
+  width: 60%;
+  max-width: 70%;
+  text-align: center;
+  line-height: 120%;
+
+  font-family: 'Inter';
+  font-style: normal;
+
+  color: #f3e4f3;
+  background-color: transparent;
+}
+
+.user-p {
+  position: absolute;
+  top: 75%;
+  left: 20.5%;
+  font-size: 1em;
+  max-width: 57% ;
+
+  text-align: center;
+  line-height: 120%;
+
+  font-family: 'Inter';
+  font-style: normal;
+
+  color: #f3e4f3;
+  background-color: transparent;
+  
+}
+
+
+.texto-criptografado {
+  background-color: transparent;
+  word-wrap: break-word;
+  font-size: 30px;
+  color: white;
+  max-height: 5000px;
+}
+
+.resultado-criptografia{
+  position: relative;
+  margin-bottom: 130%;
+}
+
+.btn-copiar {
+  position: relative;
+ left: 15%;
+ width: 70%;
+ height: 4%;
+ padding: 5.8%;
+ gap: 8px;
+
+ background-color: rgb(0, 0, 0);
+ border-radius: 24px;
+ font-style: normal;
+ font-weight: 400;
+
+ font-size: 16px;
+ line-height: 0%;
+ text-align: center;
+ color: #81ffba;
+}
+
+#mensagem {
+  position: fixed;
+  top: 0;
+  left: 35%;
+  width: 15%;
+  transform: translateY(-200%);
+  padding: 10px;
+  color:#00ff2a;
+  font-size: 18px;
+  text-align: center;
+  z-index: 9999;
+  transition: transform 0.5s;
+  font-family: 'Inter';
+  border-radius: 3px;
+}
+
+#mensagem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://media.giphy.com/media/pkm7IoQepmkeI/giphy.gif");
+  opacity: 0.8; /* ajuste o valor de 0 a 1 para alterar a opacidade */
+  z-index: -1;
+}
+                                                                        
+
+@media screen and (max-width: 820px) {
+       header img {
+         width: 6%;
+         height: auto;
+         top: 20px;
+         left: 30px
+       }
+      .imagem-em-cima {
+        display: none;
+      }
+      textarea {
+        width: 525px;
+        left: 19%;
+        height: 35%;
+        display: flex;
+        top: 13%;
+        }
+    
+        .botoes{
+          height: 6%;
+          left: 10%;
+          position: absolute;
+          top: 57%;
+          width: 650px;
+        }
+
+        .aviso img {
+          width: 2.3%;
+          height: auto;
+        }
+      
+        .aviso {
+          top: 52%;
+          width: 90%;
+          font-size: 2.5vw;
+          left: 4%;
+        }
+      
+        .container{
+        left: 20.5%;
+        top: 70%;
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        background-color: rgb(0, 36, 24);
+        border-radius: 20px;
+        width: 500px;
+        overflow: auto;
+      
+      }
+      
+      .user-msg {
+      top: 15%;
+      left: 14%;
+      width: 80%;
+      text-align: center;
+      }
+
+      .user-p {
+       text-align: center;
+       top: 54%;
+       left: 9%;
+       max-width: 90%;
+
+      }
+      .btn-copiar {
+        text-align: center;
+        left: 27%;
+        width: 50%;
+        padding: 4%;
+      }
+      
+      .resultado-criptografia{
+        position: relative;
+        margin-bottom: 21%;
+      }
+      
+  } 
+
+  @media screen and (max-width: 440px) {
+    * {
+      box-sizing: border-box;
+    }
+  
+    body {
+      overflow-x: hidden;
+    }
+  
+    header img {
+      width: 5%;
+      height: auto;
+      top: 20px;
+      left: 20px;
+    }
+  
+    .imagem-em-cima {
+      display: none;
+    }
+  
+    textarea {
+      width: 80%;
+      left: 10%;
+      height: 30%;
+      display: flex;
+      top: 13%;
+      font-size: 8vw;
+    }
+  
+    .aviso img {
+      width: 3.5%;
+      height: auto;
+    }
+  
+    .aviso {
+      top: 47%;
+      width: 90%;
+      font-size: 3.3vw;
+      left: 5%;
+    }
+  
+    .botoes {
+      height: auto;
+      left: 5%;
+      position: absolute;
+      top: 53%;
+      width: 90%;
+      font-size: 4vw;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .criptografar {
+      padding: 7%;
+      gap: 8px;
+      width: 70%;
+      height: 4%;
+      cursor: pointer;
+     
+    }
+  
+    .descriptografar {
+      font-size: 4vw;
+      left: 16%;
+      margin: 5% 0 0;
+      padding: 7%;
+      gap: 8px;
+      width: 70%;
+      height: 4%;
+      cursor: pointer;
+    }
+  
+    .container {
+      left: 10%;
+      top: 79%;
+      width: 80%;
+      margin: 0 auto;
+      height: 20%;
+      position: absolute;
+      background-color: rgb(0, 36, 24);
+      border-radius: 20px;
+      overflow: auto;
+    }
+  
+    .user-msg {
+      top: 10%;
+      left: 18%;
+      width: 60%;
+      font-size: 4vw;
+      text-align: center;
+    }
+  
+    .user-p {
+      text-align: center;
+      top: 55%;
+      left: 25%;
+      max-width: 50%;
+      font-size: 3vw;
+    }
+  
+    .btn-copiar {
+      text-align: center;
+      left: 17%;
+      width: 65%;
+      padding: 6.5%;
+      font-size: 3vw;
+    }
+  
+    .resultado-criptografia {
+      position: relative;
+      margin-bottom: 17.5%;
+    }
+    #mensagem {
+      position: fixed;
+      top: 0;
+      left: 35%;
+      width: 30%;
+      transform: translateY(-200%);
+      padding: 10px;
+      color:#00ff2a;
+      font-size: 18px;
+      text-align: center;
+      z-index: 9999;
+      transition: transform 0.5s;
+      font-family: 'Inter';
+      border-radius: 3px;
+    }
+    
+    #mensagem::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("https://media.giphy.com/media/pkm7IoQepmkeI/giphy.gif");
+      opacity: 0.7; /* ajuste o valor de 0 a 1 para alterar a opacidade */
+      z-index: -1;
+    }
+      
+  }

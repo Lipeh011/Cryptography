@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Cryptography</title>
+  <link rel="stylesheet" href="codific.css">
+</head>
+
+<body>
+
+  <header>
+     <img src="imgs/Vector-green.png" alt="Logo">
+  </header>
+
+  <div class="input-texto">
+    <textarea class="input" id="text" placeholder="Digite seu texto aqui..." pattern=^[a-zA-Z]*$"
+      oninput="this.value = this.value.replace(/[áàâãäéèêëíìîïóòôõöúùûüç]/gi, ''); onkeyup=this.value = this.value.toLowerCase(); blockAcentos() "></textarea>
+  </div>
+  
+  <div id="mensagem"></div>
+
+  <div class="container">
+    <div class = "container-conteudo">
+    <img src="imgs/not-found.webp" alt="Imagem em cima" class="imagem-em-cima">
+    <h3 class="user-msg">Nenhuma mensagem encontrada</h3>
+    <p class="user-p">Digite um texto que você deseja criptografar ou descriptografar.</p>
+    </div>
+  </div>
+  
+  <div class="aviso">
+  <img src=imgs/Aviso.png>
+  <span> Apenas letras minúsculas e sem acento.</span>
+  </img>
+  </div>
+
+  <div class="botoes">
+    <button class="criptografar" onclick="criptografarTexto()">Criptografar</button>
+    <button class="descriptografar" onclick="descriptografarTexto()">Descriptografar</button>
+  </div>
+
+  <script src="codific.js"></script>
+</body>
+
+</html>
