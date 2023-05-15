@@ -151,7 +151,7 @@ textarea::placeholder{
   overflow: auto;
 
 }
-.container::-webkit-scrollbar { /* Oculta a scrollbar do container */
+.container::-webkit-scrollbar {
   display: none;
 }
 
@@ -256,7 +256,7 @@ textarea::placeholder{
   width: 100%;
   height: 100%;
   background-image: url("https://media.giphy.com/media/pkm7IoQepmkeI/giphy.gif");
-  opacity: 0.8; /* ajuste o valor de 0 a 1 para alterar a opacidade */
+  opacity: 0.8;
   z-index: -1;
 }
                                                                         
@@ -476,7 +476,7 @@ textarea::placeholder{
       width: 100%;
       height: 100%;
       background-image: url("https://media.giphy.com/media/pkm7IoQepmkeI/giphy.gif");
-      opacity: 0.7; /* ajuste o valor de 0 a 1 para alterar a opacidade */
+      opacity: 0.7;
       z-index: -1;
     }
       
